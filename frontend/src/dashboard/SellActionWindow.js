@@ -12,7 +12,7 @@ const SellActionWindow = ({ uid }) => {
 
   const handleSellClick = async () => {
     try {
-      const holdingsRes = await axios.get("https://treda-backend-odl0.onrender.com/getHoldings", { withCredentials: true });
+      const holdingsRes = await axios.get("https://treda-2r5v.onrender.com/getHoldings", { withCredentials: true });
       const userHoldings = holdingsRes.data;
       const holding = userHoldings.find(stock => stock.name === uid);
 
@@ -20,7 +20,7 @@ const SellActionWindow = ({ uid }) => {
         alert("You don't have enough stocks to sell!");
         return;
       }
-      const res = await axios.post("https://treda-backend-odl0.onrender.com/newOrder", {
+      const res = await axios.post("https://treda-2r5v.onrender.com/newOrder", {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
