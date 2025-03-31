@@ -10,7 +10,7 @@ function Orders() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const res = await axios.get("https://treda-backend-odl0.onrender.com/getOrders",{withCredentials:true});
+                const res = await axios.get("https://treda-2r5v.onrender.com/getOrders",{withCredentials:true});
                 setAllOrders(res.data);
             } catch (error) {
                 console.error("Error fetching orders:", error);
@@ -22,7 +22,7 @@ function Orders() {
 
     const deleteOrder=async (orderId)=>{
         try{
-            await axios.delete(`https://treda-backend-odl0.onrender.com/deleteOrder/${orderId}`,{withCredentials:true});
+            await axios.delete(`https://treda-2r5v.onrender.com/deleteOrder/${orderId}`,{withCredentials:true});
             setAllOrders(allOrders.filter(order => order._id !== orderId))
         }
         catch(err){
