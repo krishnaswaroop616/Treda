@@ -20,7 +20,7 @@ function Dashboard() {
     useEffect(()=>{
         const checkUser=async ()=>{
             try{
-                const res=await axios.get("https://treda-backend-odl0.onrender.com/verify",{withCredentials:true});
+                const res=await axios.get("https://treda-2r5v.onrender.com/verify",{withCredentials:true});
                 setUser(res.data.user);
             }
 
