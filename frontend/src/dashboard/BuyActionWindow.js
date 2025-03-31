@@ -13,7 +13,7 @@ const BuyActionWindow = ({ uid }) => {
   const {closeBuyWindow}=useContext(GeneralContext);
 
   const handleBuyClick=async ()=>{
-    await axios.post("https://treda-backend-odl0.onrender.com/newOrder",{
+    await axios.post("https://treda-2r5v.onrender.com/newOrder",{
       name:uid,
       qty:stockQuantity,
       price:stockPrice,
